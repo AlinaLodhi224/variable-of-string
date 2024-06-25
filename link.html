@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Counter</title>
+</head>
+<body>
+   
+
+    <script>
+        if (localStorage.getItem("visitCount") === null) {
+            localStorage.setItem("visitCount", 0);
+        }
+
+        var visitCount = parseInt(localStorage.getItem("visitCount"));
+
+        visitCount++;
+
+        localStorage.setItem("visitCount", visitCount);
+
+        alert("You have visited this site " + visitCount + " times.");
+
+       
+    </script>
+</body>
+</html>
